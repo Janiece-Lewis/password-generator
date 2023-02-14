@@ -32,8 +32,10 @@ function generatePassword() {
   var specialCharacters = confirm("Do you want special characters in your password?");
 
   //to create new array for our password
-  if (uppercase===true) {
+  if (uppercase) {
+    // add logic to select a random letter from upperLetters Array.
     passwordOptions=passwordOptions.concat(upperLetters)
+    console.log(passwordOptions)
   }
   if (lowercase===true) {
     passwordOptions=passwordOptions.concat(lowerLetters)
@@ -44,13 +46,15 @@ function generatePassword() {
   if (specialCharacters===true) {
     passwordOptions=passwordOptions.concat(specialChar)
   }
-  console.log(passwordOptions)
-
+  // console.log(passwordOptions)
+  var password =""
   // to iterate through arrays
-  for (var i = 0; i < passwordOptions.length; i++) {
-    console.log(passwordOptions[i]);
+  for (var i = 0; i < passwordlength; i++) {
+    var character = passwordOptions[Math.floor(Math.random()*passwordOptions.length)];
+    //equal to itself plus additional charac.
+    password += character
   }
-
+   return password;
 
 }
 
