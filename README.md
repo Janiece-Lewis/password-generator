@@ -46,7 +46,8 @@ THEN the password is either displayed in an alert or written to the page
 
 
 ## Preview
-![preview image](./assets/images/demo.png)
+![preview image](./assets/images/password-gen.png)
+[Deployed Link]()
 
 ## Contributing
 Pull requests are welcome. For major changes, please open and issue first to discuss what you would like to change.
