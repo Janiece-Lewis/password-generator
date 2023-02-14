@@ -11,7 +11,7 @@ var generateBtn = document.querySelector("#generate");
 //added function to generate password
 
 function generatePassword() {
-// prompt method let's us ask user about length of password
+  // prompt method let's us ask user about length of password
   var passwordlength = prompt('How long would you like your password?');
 
   //space for password options
@@ -32,9 +32,9 @@ function generatePassword() {
   var specialCharacters = confirm("Do you want special characters in your password?");
 
   //to create new array for our password. concat method to pull items from specific array
-  if (uppercase=== true) {
+  if (uppercase === true) {
     passwordOptions = passwordOptions.concat(upperLetters);
-   
+
   }
   if (lowercase === true) {
     passwordOptions = passwordOptions.concat(lowerLetters);
@@ -61,7 +61,7 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-//allows user to see password in browser
+  //allows user to see password in browser
   passwordText.value = password;
 
 }
